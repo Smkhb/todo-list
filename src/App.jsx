@@ -1,5 +1,5 @@
 import './App.css'
-import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
     <div>
       <main>
         <section className=' min-h-screen flex justify-center items-center'>
-        <TodoForm/>
+        <TodoList/>
         </section>
       </main>
     </div>
