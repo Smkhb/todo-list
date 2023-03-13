@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import { Input } from 'postcss';
+import React, { useState, useEffect, useRef } from 'react';
 
 function TodoForm(props) {
 
     const [input, setInput] = useState('');
+
+    const inputRef = useRef(null)
+
+    useEffect(()=>{
+        inputRef.current.focus()
+    })
 
     const changed = e => {
         setInput(e.target.value)
@@ -11,7 +18,7 @@ function TodoForm(props) {
     const submited = e => {
         e.preventDefault();
 
-        props.theTodo ({
+        props.onSubmit ({
             id: Math.floor(Math.random()*10000),
             text: input
         })
@@ -25,7 +32,8 @@ function TodoForm(props) {
             placeholder='Add a todo' 
             value={input} 
             name='text'
-            onChange={changed} 
+            onChange={changed}
+            ref={inputRef} 
             />
             <button className=''>Add Todo</button>
         </form>
