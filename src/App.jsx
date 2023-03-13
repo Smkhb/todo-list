@@ -1,4 +1,5 @@
 import './App.css'
+import TodoForm from './components/TodoForm'
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
     <div>
       <main>
         <section className=' min-h-screen flex justify-center items-center'>
-        <h1 className='text-2xl text-cyan-500 underline font-bold'>Hello World</h1>
+        <TodoForm/>
         </section>
       </main>
     </div>
