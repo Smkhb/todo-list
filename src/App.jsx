@@ -4,12 +4,8 @@ import TodoList from './components/TodoList'
 function App() {
 
   return (
-    <div>
-      <main>
-        <section className=' min-h-screen flex justify-center items-center'>
+    <div className='todo-app'>
         <TodoList/>
-        </section>
-      </main>
     </div>
   )
 }

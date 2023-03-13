@@ -34,11 +34,14 @@ function Todo({ todos, completeTodo, removeTodo, updatedTodo }) {
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>
-      <div>
+      <div className='icons'>
         <RiCloseCircleFill
-          onClick={() => removeTodo(todo.id)} />
+          onClick={() => removeTodo(todo.id)} 
+          className='delete-icon'
+          />
         <TiEdit
           onClick={()=> setEdit({id:todo.id,value:todo.text})}
+          className='edit-icon'
         />
       </div>
     </div>

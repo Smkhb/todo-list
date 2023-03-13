@@ -26,16 +26,17 @@ function TodoForm(props) {
     }
 
     return (
-        <form className='' onSubmit={submited}>
+        <form className='todo-form' onSubmit={submited}>
             <input 
             type='text' 
-            placeholder='Add a todo' 
+            placeholder='Insira a Tarefa' 
             value={input} 
             name='text'
             onChange={changed}
             ref={inputRef} 
+            className='todo-input'
             />
-            <button className=''>Add Todo</button>
+            <button className='todo-button edit'>Adicionar</button>
         </form>
     )
 }
